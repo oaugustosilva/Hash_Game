@@ -1,0 +1,154 @@
+body{
+    font-family: Arial;
+    text-align: center;
+}
+
+#titulo-principal {
+    font-size: 42px;
+}
+
+/* BOTÕES */
+
+.buttons {
+    font-size: 17px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    box-shadow: 2px 2px black;
+    margin: 0 10px;
+    padding: 2px 7px;
+    
+}
+.buttons:hover{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.buttons:active{
+    background-color: royalblue;
+    box-shadow: 0 1px #666;
+    transform: translateY(2px);
+}
+
+/* JOGO */
+
+#big-container{
+    display: flex; /* Transforma o display em flex container, podendo mover ele mais
+    facilmente. https://origamid.com/projetos/flexbox-guia-completo/ */
+    width: 350px;
+    margin: 0;
+    flex-direction: row; /* Direção que o flex vai. Pode ser em column, que é coluna. */
+    flex-wrap: wrap; /* Para quebrar as divs para as linhas. */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.box{
+    height: 100px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    flex: 1 1 33%; /* Consegue usar flex na .box (item filho), por que o item pai
+    que é o big-container, é flex container. Flex: flex-grow flex-shrink flex-basis.
+    Usando 33% vai garantir que tenhamos 3 divs por linha.*/
+}
+
+/* Setando as bordas superiores das divs 1, 2 e 3, para NONE. Para fazer o formato
+do jogo da velha. O mesmo deve ser feito para os outros divs. */
+#miniblock_01, #miniblock_02, #miniblock_03 {
+    border-top: none;
+}
+#miniblock_01,#miniblock_04,#miniblock_07{
+    border-left: none;
+}
+#miniblock_07,#miniblock_08,#miniblock_09{
+    border-bottom: none;
+}
+#miniblock_03,#miniblock_06,#miniblock_09{
+    border-right: none;
+}
+
+#scoreboard-container{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+/* ## SÍMBOLOS e PLACAR ## */
+
+#scoreboarding {
+    font-size: 45px;
+    font-weight: 3px;
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+#score-x {
+    color: red;
+    font-size: 35px;
+}
+
+#scorex-value{
+    color: black;
+    font-size: 35px;
+}
+
+#score-o {
+    color: green;
+    font-size: 40px;
+    padding-left: 3px;
+}
+
+#scoreo-value{
+    color: black;
+    font-size: 35px;   
+}
+
+.x{
+    font-size: 42px;
+    color: red;
+    display: inline-block;
+    line-height: 100px;
+}
+
+.o{
+    font-size: 45px;
+    color: green;
+    display: inline-block;
+    line-height: 100px;
+}
+
+#versus{
+    font-size: 30px;
+    padding-left: 23px;
+    padding-right: 22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* CLASSE HIDE */
+
+.hide{
+    display: none !important;
+}
+
+/* FINAL MESSAGE */ 
+
+#final-message{    
+    position: absolute; /*>absolute: para aparecer em cima de tudo.*/
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0; /*>centralizando a mensagem;*/
+    right: 0; /*>centralizando a mensagem;*/
+    top: 300px;
+    height: 60px;
+    width: 350px;
+    font-size: 35px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(9, 191, 227);
+    justify-content: center; /*justifying the text*/
+    align-items: center; /*justifying the text*/
+    /*display: none; /*>para deixar ela oculta para seguir programando.*/
+}

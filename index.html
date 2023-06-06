@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title># Hash Game #</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1 id="titulo-principal">Hash Game, Mother*ucker.</h1> <! Game title. ->
+
+    <div id="button-container"> <! Creating a div for the buttons.->
+        <button id="b1-2players" class="buttons">02 Players</button>
+        <button id="b2-AI" class="buttons">Player x A.I.</button>
+    </div>
+
+    <div id="big-container" class="hide"> <! Creating a big HIDE div for the hash.
+        Inside the big div, include the smallers divs (smallers squares) and more. ->
+
+        <div id="miniblock_01" class="box"></div>
+        <div id="miniblock_02" class="box"></div>
+        <div id="miniblock_03" class="box"></div>
+        <div id="miniblock_04" class="box"></div>
+        <div id="miniblock_05" class="box"></div>
+        <div id="miniblock_06" class="box"></div>
+        <div id="miniblock_07" class="box"></div>
+        <div id="miniblock_08" class="box"></div>
+        <div id="miniblock_09" class="box"></div>
+
+
+        <div id="scoreboard-container"> <! Creating a div for all the scoreboard.
+            Then, create a span (common phrase) for de X Team score, and O Team score ->
+            <div id="scoreboarding">Placar</div>
+            <span class="score-box">
+                <span id="score-x">X</span>
+                <span id="scorex-value">0</span>
+            </span>
+            <span id="versus">x</span>
+            <span class="score-box">
+                <span id="scoreo-value">0</span>
+                <span id="score-o">O </span>
+                
+            </span>
+        </div>    
+
+    </div>
+
+    <div class="hide"> <! Outside the big div, create a X and an O, all hide. They
+        are the signs we put on the hash. ->
+        <div class="x">X</div>
+        <div class="o">O</div>
+    </div>
+
+    <div id="final-message" class="hide"> <! Create a div for the message after
+        the game. Inside this div, there's a paragraph within the message:
+        XXXXX won the game. ->
+        <p>O XXXX ganhou!</p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
